@@ -44,6 +44,14 @@
             z-index: 10;
         }
 
+        /* Ganpati Logo Style */
+        .ganpati-logo {
+            width: 100px; /* गरजेनुसार साईज कमी-जास्त करा */
+            height: auto;
+            margin-bottom: 10px;
+            animation: fadeIn 3s ease-in;
+        }
+
         .symbol {
             font-size: 2rem;
             color: var(--soft-gold);
@@ -68,7 +76,6 @@
             100% { background-position: 200px; }
         }
 
-        /* Button Animation: Pulsing & Glowing */
         .btn-mythic {
             background: transparent;
             border: 1px solid var(--soft-gold);
@@ -96,7 +103,6 @@
             animation: none;
         }
 
-        /* Rest of the code remains same for design consistency */
         .section {
             width: 90%;
             max-width: 700px;
@@ -142,6 +148,8 @@
 <canvas id="canvas"></canvas>
 
 <div class="hero" id="hero">
+    <img src="ganesh.png" alt="Ganpati Bappa" class="ganpati-logo">
+
     <div class="symbol">✧ 𑁍 ✧</div>
     <div class="tagline">Save The Date</div>
     <div class="names">Ganpat & Pallavi</div>
@@ -195,7 +203,7 @@
         document.getElementById('content').scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Particles & Countdown Scripts (As before)
+    // Particles & Countdown Scripts
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
